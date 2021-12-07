@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
-import { getColor } from '../../Utils/colors';
-import { deviceWidth } from '../../Utils/dimensions';
+import { getColor } from '../../utils/colors';
+import { deviceWidth } from '../../utils/dimensions';
 
 const styles = StyleSheet.create({
     container: {
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     },
 
     hourNotification: {
-        alignItems: 'center',
+        alignItems: 'flex-end',
     },
 
     date: {

@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import { Text, View } from 'react-native';
-import globalStyles from '../../Utils/globalStyles';
+import globalStyles from '../../utils/globalStyles';
 import Badge from '../Badge';
 import ImageProfile from '../ImageProfile';
 import styles from './styles';

@@ -1,5 +1,6 @@
 export type colorName =
     | 'tallDarkGreen'
+    | 'chatGreenColor'
     | 'lowDarkGreen'
     | 'Green'
     | 'lightGreen'
@@ -14,6 +15,7 @@ export type colorName =
 
 export const colorClass = {
     tallDarkGreen: '#075E54',
+    chatGreenColor: '#056162',
     lowDarkGreen: '#128C7E',
     Green: '#25D366',
     lightGreen: '#DCF8C6',

@@ -1,11 +1,12 @@
 import { StyleSheet } from 'react-native';
-import { getColor } from '../../Utils/colors';
+import { getColor } from '../../utils/colors';
 
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
         alignItems: 'center',
         paddingVertical: 10,
+        marginTop: -15,
         paddingHorizontal: 20,
         backgroundColor: getColor('lowDarkGreen'),
     },

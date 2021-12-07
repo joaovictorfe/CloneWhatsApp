@@ -1,13 +1,19 @@
 import React, { memo } from 'react';
 import { View, Text } from 'react-native';
-import globalStyles from '../../Utils/globalStyles';
+import globalStyles from '../../utils/globalStyles';
+import Icons from '../Icons';
 import styles from './styles';
 
 const HeaderOptions = () => {
     return (
         <View style={styles.container}>
             <View style={styles.camera}>
-                <Text style={globalStyles.title}>icon</Text>
+                <Icons
+                    name="camera"
+                    size={28}
+                    color="white"
+                    style={{ marginHorizontal: -10, marginTop: 5 }}
+                />
             </View>
             <View style={styles.optionsOrganization}>
                 <Text style={globalStyles.title}>conversas</Text>

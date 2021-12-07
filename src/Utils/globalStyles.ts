@@ -5,12 +5,12 @@ const globalStyles = StyleSheet.create({
     title: {
         color: getColor('pureWhite'),
         fontSize: 18,
-        fontWeight: '700',
+        fontWeight: '600',
     },
 
     subText: {
         color: getColor('subText'),
-        fontSize: 16,
+        fontSize: 14,
         fontWeight: '400',
     },
 });

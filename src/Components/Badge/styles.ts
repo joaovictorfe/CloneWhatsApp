@@ -1,18 +1,19 @@
 import { StyleSheet } from 'react-native';
-import { getColor } from '../../Utils/colors';
+import { getColor } from '../../utils/colors';
 
 const styles = StyleSheet.create({
     container: {
-        borderRadius: 10,
+        borderRadius: 20,
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        paddingHorizontal: 5,
+        paddingHorizontal: 7,
+        paddingVertical: 3,
         backgroundColor: getColor('lowDarkGreen'),
     },
 
     title: {
-        fontSize: 14,
+        fontSize: 10,
         fontWeight: '400',
         color: getColor('bgBlack'),
     },
