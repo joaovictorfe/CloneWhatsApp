@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
         paddingBottom: 25,
         alignItems: 'center',
         justifyContent: 'space-between',
-        backgroundColor: getColor('lowDarkGreen'),
+        backgroundColor: getColor('primaryGreen'),
     },
 
     icons: {

@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingHorizontal: 7,
         paddingVertical: 3,
-        backgroundColor: getColor('lowDarkGreen'),
+        backgroundColor: getColor('primaryGreen'),
     },
 
     title: {

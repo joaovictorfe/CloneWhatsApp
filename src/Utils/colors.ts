@@ -1,32 +1,29 @@
 export type colorName =
-    | 'tallDarkGreen'
-    | 'chatGreenColor'
-    | 'lowDarkGreen'
-    | 'Green'
-    | 'lightGreen'
+    | 'darkGreen'
+    | 'secondaryGreen'
+    | 'primaryGreen'
     | 'blue'
     | 'white'
     | 'pureWhite'
-    | 'textColorChat'
-    | 'subText'
+    | 'lowGray'
+    | 'secondaryGray'
     | 'bgBlack'
-    | 'grayChat'
-    | 'headerGray';
+    | 'secondaryGray'
+    | 'primaryGray';
 
 export const colorClass = {
-    tallDarkGreen: '#075E54',
-    chatGreenColor: '#056162',
-    lowDarkGreen: '#128C7E',
     Green: '#25D366',
-    lightGreen: '#DCF8C6',
-    blue: '#34B7F1',
-    white: '#ECE5DD',
     pureWhite: '#FFFFFF',
-    textColorChat: '#E7E7E8',
-    subText: '#CBCCCD',
     bgBlack: '#131C21',
-    grayChat: '#323739',
-    headerGray: '#2A2F32',
+    darkGreen: '#056162',
+    secondaryGreen: '#009588',
+    primaryGreen: '#00af9c',
+    blue: '#34b7f1',
+    darkGray: '#74787b',
+    primaryGray: '#828689',
+    secondaryGray: '#b1b3b5',
+    lowGray: '#d6d7d9',
+    white: '#f1f1f2',
 };
 
 export const getColor = (color: colorName): string => colorClass[color];

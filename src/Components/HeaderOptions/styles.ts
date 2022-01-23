@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         marginTop: -15,
         paddingHorizontal: 20,
-        backgroundColor: getColor('lowDarkGreen'),
+        backgroundColor: getColor('primaryGreen'),
     },
 
     camera: {

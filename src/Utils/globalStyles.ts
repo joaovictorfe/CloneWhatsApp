@@ -9,7 +9,7 @@ const globalStyles = StyleSheet.create({
     },
 
     subText: {
-        color: getColor('subText'),
+        color: getColor('secondaryGray'),
         fontSize: 14,
         fontWeight: '400',
     },

@@ -145,8 +145,6 @@ const chats = [
 const Conversas = () => {
     return (
         <View style={styles.container}>
-            <Header />
-            <HeaderOptions />
             <View style={styles.chats}>
                 <FlatList
                     data={chats}
