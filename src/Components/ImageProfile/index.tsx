@@ -4,16 +4,20 @@ import styles from './styles';
 
 type Props = {
     source?: string;
-    size: number;
+    size?: number;
 };
 
 const ImageProfile = ({ source, size }: Props) => {
     return (
         <TouchableWithoutFeedback
-            onPress={() => console.log('clique ImagelProfile')}>
-            <View style={[styles.container, { height: size, width: size }]}>
-                {source ? <Image source={{ uri: source }} /> : <></>}
-            </View>
+            onPress={() => console.log('clique ImagelProfile', source)}>
+            <Image
+                source={{ uri: source }}
+                style={[
+                    styles.container,
+                    { width: size || 54, height: size || 54 },
+                ]}
+            />
         </TouchableWithoutFeedback>
     );
 };

@@ -1,21 +1,25 @@
 import { NavigationContainer } from '@react-navigation/native';
 import React, { memo } from 'react';
-import { StatusBar, View } from 'react-native';
-import Routes from './routes';
+import { View, StatusBar } from 'react-native';
+import Routes from './Routes';
+import { getColor } from './Utils/colors';
 
 const App = () => {
     const children = () => {
         return (
-            <>
-                <View style={{ flex: 1 }}>
-                    <StatusBar
-                        translucent
-                        barStyle="light-content"
-                        backgroundColor="transparent"
-                    />
-                    <Routes />
-                </View>
-            </>
+            <View
+                style={{
+                    flex: 1,
+                    backgroundColor: getColor('headerBg'),
+                }}>
+                <View
+                    style={{
+                        paddingTop: 40,
+                    }}
+                />
+                <StatusBar translucent barStyle="light-content" />
+                <Routes />
+            </View>
         );
     };
 

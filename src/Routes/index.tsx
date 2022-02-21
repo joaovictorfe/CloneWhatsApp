@@ -1,52 +1,68 @@
 import React, { memo } from 'react';
-import Conversas from '../Pages/Conversas';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Conversas from '../Pages/Conversas';
 import Status from '../Pages/Status';
-import Chamadas from '../Pages/Chamadas';
-import Icons from '../components/Icons';
+import Icons from '../Components/Icons';
 import Camera from '../Pages/Camera';
-import { getColor } from '../utils/colors';
+import { getColor } from '../Utils/colors';
+import Chat from '../Pages/Chat';
 
 const Tab = createMaterialTopTabNavigator();
+const Stack = createNativeStackNavigator();
 
-const Routes = () => {
-    const children = () => {
-        return (
-            <>
-                <Tab.Screen
-                    options={{
-                        tabBarIcon: () => (
-                            <Icons name="camera" size={28} color="white" />
-                        ),
-                        tabBarShowLabel: false,
-                    }}
-                    name="Camera"
-                    component={Camera}
-                />
-                <Tab.Screen name="Conversas" component={Conversas} />
-                <Tab.Screen name="Status" component={Status} />
-                <Tab.Screen name="Chamadas" component={Chamadas} />
-            </>
-        );
-    };
-    return (
+function Routes() {
+    const Home = () => (
         <Tab.Navigator
-            children={children()}
             initialRouteName="Conversas"
+            showPageIndicator={false}
             screenOptions={{
                 tabBarActiveTintColor: getColor('secondaryGreen'),
-                tabBarInactiveTintColor: getColor('white'),
+                tabBarInactiveTintColor: getColor('pureWhite'),
                 tabBarLabelStyle: {
-                    color: getColor('pureWhite'),
+                    alignItems: 'center',
                     fontSize: 14,
                     fontWeight: '700',
                 },
                 tabBarStyle: {
-                    backgroundColor: getColor('primaryGreen'),
                     height: 45,
+                    backgroundColor: getColor('headerBg'),
                 },
-            }}
-            style={{ paddingTop: 30 }}></Tab.Navigator>
+
+                tabBarIndicatorStyle: {
+                    backgroundColor: getColor('primaryGreen'),
+                },
+            }}>
+            <Tab.Screen
+                name="Camera"
+                component={Camera}
+                options={{
+                    tabBarIcon: ({ focused }) => (
+                        <Icons
+                            name="camera"
+                            size={32}
+                            color={focused ? 'primaryGreen' : 'white'}
+                            style={{
+                                margin: -5,
+                            }}
+                        />
+                    ),
+                    tabBarShowLabel: false,
+                }}
+            />
+            <Tab.Screen name="Conversas" component={Conversas} />
+            <Tab.Screen name="Status" component={Status} />
+        </Tab.Navigator>
     );
-};
+
+    return (
+        <Stack.Navigator
+            initialRouteName="Home"
+            screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="Home" component={Home} />
+            <Stack.Screen name="Chat" component={Chat} />
+        </Stack.Navigator>
+    );
+}
+
 export default memo(Routes);

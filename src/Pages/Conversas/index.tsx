@@ -1,9 +1,7 @@
 import styles from './styles';
 import React, { memo } from 'react';
-import Header from '../../components/Header';
 import { FlatList, View } from 'react-native';
-import ChatListOption from '../../components/ChatListItem';
-import HeaderOptions from '../../components/HeaderOptions';
+import ChatListOption from '../../Components/ChatListItem';
 
 const chats = [
     {
@@ -12,7 +10,8 @@ const chats = [
         lastMessage: 'Última mensagem muito grande para ser exibida completa',
         hourLastMessage: '99:99',
         notification: '5',
-        picture: 'http://lorempixel.com.br/500/400/?1',
+        picture:
+            'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
     },
     {
         id: 1,
@@ -20,6 +19,8 @@ const chats = [
         lastMessage: 'Last Message',
         hourLastMessage: '18:36',
         notification: '15',
+        picture:
+            'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
     },
     {
         id: 2,
@@ -27,6 +28,8 @@ const chats = [
         lastMessage: 'Last Message',
         hourLastMessage: '18:36',
         notification: '215',
+        picture:
+            'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
     },
     {
         id: 3,
@@ -34,6 +37,8 @@ const chats = [
         lastMessage: 'Last Message',
         hourLastMessage: '18:36',
         notification: '3.215',
+        picture:
+            'https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
     },
     {
         id: 4,
@@ -41,6 +46,8 @@ const chats = [
         lastMessage: 'Last Message',
         hourLastMessage: '18:36',
         notification: '43.215',
+        picture:
+            'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
     },
     {
         id: 5,
@@ -48,6 +55,8 @@ const chats = [
         lastMessage: 'Last Message',
         hourLastMessage: '18:36',
         notification: '543.215',
+        picture:
+            'https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
     },
     {
         id: 6,
@@ -55,6 +64,8 @@ const chats = [
         lastMessage: 'Last Message',
         hourLastMessage: '18:36',
         notification: '5',
+        picture:
+            'https://images.pexels.com/photos/372042/pexels-photo-372042.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
     },
     {
         id: 7,
@@ -62,6 +73,8 @@ const chats = [
         lastMessage: 'Last Message',
         hourLastMessage: '18:36',
         notification: '5',
+        picture:
+            'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
     },
     {
         id: 8,
@@ -69,6 +82,8 @@ const chats = [
         lastMessage: 'Last Message',
         hourLastMessage: '18:36',
         notification: '5',
+        picture:
+            'https://images.pexels.com/photos/775358/pexels-photo-775358.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
     },
     {
         id: 9,
@@ -76,6 +91,8 @@ const chats = [
         lastMessage: 'Last Message',
         hourLastMessage: '18:36',
         notification: '5',
+        picture:
+            'https://images.pexels.com/photos/8666975/pexels-photo-8666975.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
     },
     {
         id: 10,
@@ -83,6 +100,8 @@ const chats = [
         lastMessage: 'Last Message',
         hourLastMessage: '18:36',
         notification: '5',
+        picture:
+            'https://images.pexels.com/photos/1755385/pexels-photo-1755385.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
     },
     {
         id: 11,
@@ -90,6 +109,8 @@ const chats = [
         lastMessage: 'Last Message',
         hourLastMessage: '18:36',
         notification: '5',
+        picture:
+            'https://images.pexels.com/photos/1933873/pexels-photo-1933873.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
     },
     {
         id: 12,
@@ -97,6 +118,8 @@ const chats = [
         lastMessage: 'Last Message',
         hourLastMessage: '18:36',
         notification: '5',
+        picture:
+            'https://images.pexels.com/photos/8438878/pexels-photo-8438878.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
     },
     {
         id: 13,
@@ -104,6 +127,8 @@ const chats = [
         lastMessage: 'Last Message',
         hourLastMessage: '18:36',
         notification: '5',
+        picture:
+            'https://images.pexels.com/photos/6749758/pexels-photo-6749758.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
     },
     {
         id: 14,
@@ -111,6 +136,8 @@ const chats = [
         lastMessage: 'Last Message',
         hourLastMessage: '18:36',
         notification: '5',
+        picture:
+            'https://images.pexels.com/photos/8819388/pexels-photo-8819388.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
     },
     {
         id: 15,
@@ -118,6 +145,8 @@ const chats = [
         lastMessage: 'Last Message',
         hourLastMessage: '18:36',
         notification: '5',
+        picture:
+            'https://images.pexels.com/photos/10057707/pexels-photo-10057707.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
     },
     {
         id: 16,
@@ -125,6 +154,8 @@ const chats = [
         lastMessage: 'Last Message',
         hourLastMessage: '18:36',
         notification: '5',
+        picture:
+            'https://images.pexels.com/photos/8101331/pexels-photo-8101331.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
     },
     {
         id: 17,
@@ -132,6 +163,8 @@ const chats = [
         lastMessage: 'Last Message',
         hourLastMessage: '18:36',
         notification: '5',
+        picture:
+            'https://images.pexels.com/photos/10159292/pexels-photo-10159292.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
     },
     {
         id: 18,
@@ -139,6 +172,8 @@ const chats = [
         lastMessage: 'Last Message',
         hourLastMessage: '18:36',
         notification: '5',
+        picture:
+            'https://images.pexels.com/photos/7526917/pexels-photo-7526917.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
     },
 ];
 
@@ -158,6 +193,7 @@ const Conversas = () => {
                             picture={item.picture}
                         />
                     )}
+                    bounces={false}
                 />
             </View>
         </View>

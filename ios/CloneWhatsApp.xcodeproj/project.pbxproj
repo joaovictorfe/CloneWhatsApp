@@ -14,6 +14,7 @@
 		6172F2D35A4C3AA820D92908 /* libPods-CloneWhatsApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6423831EA8574132BED9D8CC /* libPods-CloneWhatsApp.a */; };
 		7EF68E3733C33B6898317E18 /* libPods-CloneWhatsApp-CloneWhatsAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABFE59519B596E51CEFDCCC0 /* libPods-CloneWhatsApp-CloneWhatsAppTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		841A2940279CED9B007CAB3C /* cloneWhatsAppIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 841A293F279CED9B007CAB3C /* cloneWhatsAppIcons.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		6423831EA8574132BED9D8CC /* libPods-CloneWhatsApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CloneWhatsApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C97AB639B58BBB4B15BBE30 /* Pods-CloneWhatsApp-CloneWhatsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloneWhatsApp-CloneWhatsAppTests.debug.xcconfig"; path = "Target Support Files/Pods-CloneWhatsApp-CloneWhatsAppTests/Pods-CloneWhatsApp-CloneWhatsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = CloneWhatsApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		841A293F279CED9B007CAB3C /* cloneWhatsAppIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = cloneWhatsAppIcons.ttf; path = ../assets/fonts/cloneWhatsAppIcons.ttf; sourceTree = "<group>"; };
 		ABFE59519B596E51CEFDCCC0 /* libPods-CloneWhatsApp-CloneWhatsAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CloneWhatsApp-CloneWhatsAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0A881CF5CF3F2B244570E2A /* Pods-CloneWhatsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloneWhatsApp.debug.xcconfig"; path = "Target Support Files/Pods-CloneWhatsApp/Pods-CloneWhatsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D00AAFFCFCFDA5787532823F /* Pods-CloneWhatsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloneWhatsApp.release.xcconfig"; path = "Target Support Files/Pods-CloneWhatsApp/Pods-CloneWhatsApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				841A293F279CED9B007CAB3C /* cloneWhatsAppIcons.ttf */,
 				13B07FAE1A68108700A75B9A /* CloneWhatsApp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* CloneWhatsAppTests */,
@@ -145,7 +148,6 @@
 				6C97AB639B58BBB4B15BBE30 /* Pods-CloneWhatsApp-CloneWhatsAppTests.debug.xcconfig */,
 				1D0AE47A65C8663E3B452821 /* Pods-CloneWhatsApp-CloneWhatsAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -244,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				841A2940279CED9B007CAB3C /* cloneWhatsAppIcons.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

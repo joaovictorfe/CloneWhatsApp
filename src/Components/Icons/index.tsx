@@ -2,8 +2,8 @@ import React from 'react';
 import { memo } from 'react';
 import { IconProps } from 'react-native-vector-icons/Icon';
 import CustomIcon from '../../assets/icons/CustomIcon';
-import { colorName, getColor } from '../../utils/colors';
-import { getIcon, IconName } from '../../utils/icons';
+import { colorName, getColor } from '../../Utils/colors';
+import { getIcon, IconName } from '../../Utils/icons';
 
 interface Props extends IconProps {
     name: IconName;

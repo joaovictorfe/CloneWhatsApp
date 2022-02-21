@@ -1,6 +1,7 @@
+import { useNavigation } from '@react-navigation/native';
 import React, { memo } from 'react';
-import { Text, View } from 'react-native';
-import globalStyles from '../../utils/globalStyles';
+import { Pressable, Text, View } from 'react-native';
+import globalStyles from '../../Utils/globalStyles';
 import Badge from '../Badge';
 import ImageProfile from '../ImageProfile';
 import styles from './styles';
@@ -20,9 +21,15 @@ const ChatListItem = ({
     notification,
     picture,
 }: Props) => {
+    const navigator = useNavigation();
+
     return (
-        <View style={styles.container}>
-            <ImageProfile size={54} source={picture} />
+        <Pressable
+            onPress={() =>
+                navigator.navigate('Chat', { source: picture, userName: name })
+            }
+            style={styles.container}>
+            <ImageProfile source={picture} />
             <View style={styles.informations}>
                 <View style={styles.chatInfos}>
                     <Text numberOfLines={1} style={globalStyles.title}>
@@ -43,7 +50,7 @@ const ChatListItem = ({
                     </View>
                 </View>
             </View>
-        </View>
+        </Pressable>
     );
 };
 export default memo(ChatListItem);
