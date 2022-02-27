@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
 
     chat: {
         flex: 1,
+        justifyContent: 'space-between',
     },
 
     messages: {
@@ -25,16 +26,15 @@ const styles = StyleSheet.create({
         height: 50,
         flexDirection: 'row',
         alignItems: 'center',
-        marginBottom: 10,
+        flexWrap: 'wrap-reverse',
     },
 
     keyboardInputs: {
         flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
-        height: '90%',
         backgroundColor: getColor('headerBg'),
-        borderRadius: 20,
+        borderRadius: 26,
         marginLeft: 5,
     },
 
@@ -44,10 +44,18 @@ const styles = StyleSheet.create({
         borderRadius: 26,
         backgroundColor: getColor('secondaryGreen'),
         marginHorizontal: 5,
+        alignItems: 'center',
+        alignSelf: 'flex-start',
+        justifyContent: 'center',
     },
 
     input: {
         flex: 1,
+        color: getColor('white'),
+        height: '90%',
+        maxHeight: 100,
+        marginVertical: 15,
+        alignSelf: 'flex-end',
     },
 });
 export default styles;
