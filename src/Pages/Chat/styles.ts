@@ -54,8 +54,10 @@ const styles = StyleSheet.create({
         color: getColor('white'),
         height: '90%',
         maxHeight: 100,
-        marginVertical: 15,
+        marginTop: 10,
+        marginBottom: 15,
         alignSelf: 'flex-end',
+        fontSize: 18,
     },
 });
 export default styles;
