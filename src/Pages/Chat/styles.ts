@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
         height: 50,
         flexDirection: 'row',
         alignItems: 'center',
-        flexWrap: 'wrap-reverse',
+        marginBottom: 5,
     },
 
     keyboardInputs: {

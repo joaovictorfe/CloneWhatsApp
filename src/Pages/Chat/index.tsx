@@ -17,6 +17,7 @@ import Icons from '../../Components/Icons';
 import { getColor } from '../../Utils/colors';
 import ChatMessageSended from '../../Components/ChatMessageSended';
 import ChatMessageReceived from '../../Components/ChatMessageReceived';
+import { Status } from '../../data/Messages/IMessages';
 
 type Props = {
     route: {
@@ -68,16 +69,8 @@ const Chat = ({ route }: Props) => {
                     <View style={styles.messages}>
                         <ScrollView
                             keyboardDismissMode="interactive"
-                            keyboardShouldPersistTaps="handled">
-                            <ChatMessageSended
-                                message="Teste de mensagem"
-                                date={new Date()}
-                            />
-                            <ChatMessageReceived
-                                message="Teste de mensagem recebida muito grande para teste"
-                                date={new Date()}
-                            />
-                        </ScrollView>
+                            keyboardShouldPersistTaps="handled"
+                            style={{ marginBottom: 5 }}></ScrollView>
                     </View>
 
                     <View style={styles.inputContainer}>

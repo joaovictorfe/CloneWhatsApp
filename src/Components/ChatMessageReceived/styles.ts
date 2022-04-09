@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
         maxWidth: deviceWidth * 0.8,
-        marginHorizontal: 10,
+        marginLeft: 10,
         marginTop: 5,
     },
 
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
         borderTopRightRadius: 8,
         borderBottomLeftRadius: 8,
         borderBottomRightRadius: 8,
-        padding: 5,
+        paddingVertical: 5,
         paddingHorizontal: 10,
     },
 
@@ -24,7 +24,15 @@ const styles = StyleSheet.create({
         fontSize: 18,
     },
 
+    timeStatus: {
+        flexDirection: 'row',
+        position: 'absolute',
+        bottom: 3,
+        right: 8,
+    },
+
     time: {
+        paddingRight: 5,
         alignSelf: 'flex-end',
         color: getColor('lowGray'),
     },

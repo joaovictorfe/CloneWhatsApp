@@ -4,10 +4,11 @@ import { deviceWidth } from '../../Utils/dimensions';
 
 const styles = StyleSheet.create({
     container: {
+        flexShrink: 2,
         flexDirection: 'row',
         alignSelf: 'flex-end',
         maxWidth: deviceWidth * 0.8,
-        marginHorizontal: 10,
+        marginRight: 10,
         marginTop: 5,
     },
 
@@ -16,7 +17,7 @@ const styles = StyleSheet.create({
         borderTopLeftRadius: 8,
         borderBottomLeftRadius: 8,
         borderBottomRightRadius: 8,
-        padding: 5,
+        paddingVertical: 5,
         paddingHorizontal: 10,
     },
 
@@ -25,8 +26,16 @@ const styles = StyleSheet.create({
         fontSize: 18,
     },
 
+    timeStatus: {
+        flexDirection: 'row',
+        position: 'absolute',
+        bottom: 3,
+        right: 8,
+    },
+
     time: {
-        alignSelf: 'flex-end',
+        paddingRight: 5,
+        fontSize: 12,
         color: getColor('lowGray'),
     },
 });
