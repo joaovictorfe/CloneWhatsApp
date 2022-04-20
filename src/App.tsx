@@ -4,13 +4,17 @@ import { View, StatusBar } from 'react-native';
 import Routes from './Routes';
 import { getColor } from './Utils/colors';
 
+import { auth } from './config/firebase';
+
 const App = () => {
     const children = () => {
         return (
             <View
                 style={{
                     flex: 1,
-                    backgroundColor: getColor('headerBg'),
+                    backgroundColor: auth.currentUser
+                        ? getColor('headerBg')
+                        : '#0A1B23',
                 }}>
                 <View
                     style={{

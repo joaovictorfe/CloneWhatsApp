@@ -11,7 +11,8 @@ export type colorName =
     | 'lowGray'
     | 'primaryGray'
     | 'secondaryGray'
-    | 'darkGray';
+    | 'darkGray'
+    | 'bgAuthenticationFlow';
 
 export const colorClass = {
     Green: '#25D366',
@@ -28,6 +29,7 @@ export const colorClass = {
     primaryGray: '#828689',
     secondaryGray: '#b1b3b5',
     darkGray: '#74787b',
+    bgAuthenticationFlow: '#0A1B23',
 };
 
 export const getColor = (color: colorName): string => colorClass[color];
