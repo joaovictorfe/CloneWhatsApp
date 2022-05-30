@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -15,9 +15,28 @@ import SignUp from '../Pages/SignUp';
 import { getColor } from '../Utils/colors';
 
 import { auth } from '../config/firebase';
+import { onAuthStateChanged } from 'firebase/auth';
 
 const Tab = createMaterialTopTabNavigator();
 const Stack = createNativeStackNavigator();
+
+declare global {
+    namespace ReactNavigation {
+        interface RootParamList {
+            Onboarding: undefined;
+            SignIn: undefined;
+            SignUp: undefined;
+            Camera: undefined;
+            Conversas: undefined;
+            Status: undefined;
+            Home: undefined;
+            Chat: {
+                source: string;
+                userName: string;
+            };
+        }
+    }
+}
 
 function Routes() {
     const Home = () => (
@@ -80,7 +99,25 @@ function Routes() {
         </Stack.Navigator>
     );
 
-    return auth.currentUser ? signedFlow : signInFlow;
+    const [logged, setLogged] = useState(false);
+
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(
+            auth,
+            user => {
+                console.log('usuario:', user);
+                setLogged(true);
+            },
+            error => {
+                console.log('erro:', error);
+                setLogged(false);
+            },
+        );
+        //ver como mudar estado
+        return unsubscribe();
+    }, []);
+
+    return logged ? signedFlow : signInFlow;
 }
 
 export default memo(Routes);

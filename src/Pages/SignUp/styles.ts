@@ -6,7 +6,11 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: getColor('bgAuthenticationFlow'),
-        alignItems: 'center',
+        paddingHorizontal: 25,
+    },
+
+    icon: {
+        marginTop: 15,
     },
 
     title: {
@@ -19,10 +23,8 @@ const styles = StyleSheet.create({
 
     input: {
         borderRadius: 4,
-        marginHorizontal: 10,
         backgroundColor: getColor('white'),
         height: 38,
-        width: deviceWidth * 0.8,
         marginBottom: 20,
         padding: 10,
         fontSize: 18,

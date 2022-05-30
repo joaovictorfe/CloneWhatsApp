@@ -17,6 +17,6 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-export const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig, 'CloneWhatsApp');
 
 export const auth = getAuth(app);
